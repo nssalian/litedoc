@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/litedoc-core",
+  "crates/litedoc-cli",
+  "crates/litedoc-py",
+]
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.bench]
+lto = true
+codegen-units = 1

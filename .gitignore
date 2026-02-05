@@ -1,0 +1,62 @@
+# Build artifacts
+/target/
+**/*.rs.bk
+
+# Cargo.lock for libraries (keep for binaries/applications)
+# Uncomment if publishing as library-only:
+# Cargo.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Platform-specific binaries
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Debug symbols
+*.dSYM/
+*.pdb
+
+# Coverage
+*.gcda
+*.gcno
+lcov.info
+coverage/
+tarpaulin-report.html
+
+# Benchmark outputs
+criterion/
+
+# Generated reports (regenerate with tests/benchmarks)
+*.csv
+robustness_report.csv
+robustness_benchmark.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.whl
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Maturin (Python bindings build)
+crates/litedoc-py/target/
+crates/litedoc-py/*.so
+crates/litedoc-py/*.pyd
+
+# Claude Code
+.claude/

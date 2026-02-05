@@ -1,0 +1,22 @@
+[package]
+name = "litedoc-py"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Python bindings for LiteDoc parser"
+repository = "https://github.com/nssalian/litedoc"
+keywords = ["litedoc", "parser", "python", "pyo3"]
+
+[lib]
+name = "pyld"
+crate-type = ["cdylib"]
+test = false
+bench = false
+doctest = false
+
+[dependencies]
+litedoc-core = { path = "../litedoc-core", version = "0.1.0" }
+pyo3 = { version = "0.24.1", features = ["extension-module"] }
+
+[build-dependencies]
+pyo3-build-config = { version = "0.24.1", features = ["resolve-config"] }

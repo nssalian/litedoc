@@ -1,0 +1,26 @@
+[package]
+name = "litedoc-core"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Deterministic document parser for machine-generated output with error recovery"
+repository = "https://github.com/nssalian/litedoc"
+documentation = "https://docs.rs/litedoc-core"
+readme = "../../README.md"
+keywords = ["parser", "document", "llm", "ai", "agent"]
+categories = ["parsing", "text-processing"]
+
+[dependencies]
+memchr = "2.7"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+pulldown-cmark = "0.10"
+
+[[bench]]
+name = "parse_benchmark"
+harness = false
+
+[[bench]]
+name = "robustness_benchmark"
+harness = false

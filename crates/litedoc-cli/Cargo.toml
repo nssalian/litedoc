@@ -1,0 +1,19 @@
+[package]
+name = "litedoc-cli"
+version = "0.1.0"
+edition = "2021"
+description = "Command-line tool for parsing and validating LiteDoc documents"
+license = "Apache-2.0"
+repository = "https://github.com/nssalian/litedoc"
+keywords = ["litedoc", "markdown", "parser", "cli"]
+categories = ["command-line-utilities", "text-processing"]
+readme = "README.md"
+
+[[bin]]
+name = "ldcli"
+path = "src/main.rs"
+
+[dependencies]
+litedoc-core = { path = "../litedoc-core", version = "0.1.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
